@@ -4,10 +4,12 @@ Two non-negative integers are called AND-Siblings if they can be obtained by eac
 
 Write the function:
 
+```
 function solution (input) {
   // logic here
   return null;
 }
+```
 
 Given any String input, returns all the distinct AND-Siblings that can be formed by the positive integers that can be found on it in descending order. Please keep in mind the efficiency of your algorithm when writing the solution.
 
