@@ -1,14 +1,10 @@
-/**
-* The following is the function where the solution shall be written
-*/
-
 function solution (input) {
   let results = [];
   let onlyNums = input.match(/\d/g);
 
-  if (onlyNums === null){
-    return "Error, no numbers were found!";
-  }
+if (onlyNums === null) {
+        throw Error(`No numbers were found! Input given : ${input}`);
+   }
 
   const permute = (arr, m = []) => {
     if (arr.length === 0) {
@@ -27,5 +23,6 @@ function solution (input) {
  const final = results.map(result => parseInt(result.join(''), 10)).sort().reverse();
   return final;
 }
-console.log(solution('326')); // expected ouput 632,623,362,326,263,236
+console.log(solution('236')); // expected ouput 632,623,362,326,263,236
 console.log(solution('A 3B2 C6D')); // expected ouput 632,623,362,326,263,236
+console.log(solution('ABC')); // expected Error
