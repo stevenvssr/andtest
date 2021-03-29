@@ -20,8 +20,9 @@ if (onlyNums === null) {
 
  permute(onlyNums);
 
- const final = results.map(result => parseInt(result.join(''), 10)).sort().reverse();
-  return final;
+ const final = results.map(result => result.join(''), 10).sort().reverse();
+  let uniqueArray = [...new Set(final)];
+  return uniqueArray
 }
 console.log(solution('236')); // expected ouput 632,623,362,326,263,236
 console.log(solution('A 3B2 C6D')); // expected ouput 632,623,362,326,263,236
